@@ -1,8 +1,8 @@
 import React from 'react'
 
-const MenuCard = ({emoji, name, votes}) => {
+const MenuCard = ({emoji, name, votes,isTop,onVote}) => {
     return (
-        <li className='card '>
+        <li className={`card${isTop? " is-top":""}` }>
             <div className="card__emoji">
                 {emoji}
             </div>
@@ -12,7 +12,7 @@ const MenuCard = ({emoji, name, votes}) => {
             <div className="card__votes">
                 {votes}
             </div>
-            <button type='button' className='card__btn'>투표하기</button>
+            <button type='button' className='card__btn' onClick={onVote}>투표하기</button>
         </li>
     )
 }

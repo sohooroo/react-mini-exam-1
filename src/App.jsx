@@ -44,7 +44,7 @@ function App() {
     }])
   }
 
-  const reset=()=> setMenus(menus.map((m)=>({...m, vote:0})))
+  const reset=()=> setMenus(menus.map((m)=>({...m, votes:0})))
 
 
   return (
